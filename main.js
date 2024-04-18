@@ -7,8 +7,7 @@ var Wishlist_products = [];
 var Cart_Products = [];
 
 var cards = document.getElementsByClassName("product");
-for (let i = 0; i < cards.length; i++) {
-    console.log(cards[i].querySelector(".part-1").querySelector('.item_2').querySelector(".btnn"));
+for (let i = 0; i < cards.length; i++) {    
     cards[i].querySelector(".part-1").querySelector('.item_2').querySelector(".btnn").addEventListener("click", function() {
         Get_Product(cards[i]);
     });
