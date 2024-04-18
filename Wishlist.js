@@ -5,7 +5,7 @@ if (cookieValue) {
     var Current_Product = JSON.parse(cookieValue);
     window.onload = function() {
         set_Values();
-
+        console.log(Current_Product);
         function set_Values() {
             for (let i = 0; i < Current_Product.length; i++) {
                 let Cur_Names = new Set(Current_Product.map(el => el.Name));
@@ -33,7 +33,7 @@ function Delete_Object(arg, Name) {
     Cart_Product = Cart_Product.filter(el => el.ID !== Name);
     document.cookie = 'MyWishlist=' + JSON.stringify(Cart_Product);
 
-    //location.reload();
+    location.reload();
 }
 
 function Load_Coockies(index) {

@@ -7,27 +7,29 @@ var Wishlist_products = [];
 var Cart_Products = [];
 
 var cards = document.getElementsByClassName("product");
+
 for (let i = 0; i < cards.length; i++) {    
-    cards[i].querySelector(".part-1").querySelector('.item_2').querySelector(".btnn").addEventListener("click", function() {
+    cards[i].querySelector(".item_3 .cart").addEventListener("click", function() {
         Get_Product(cards[i]);
     });
 
-    cards[i].querySelector(".part-1 #Wishlist_btn").addEventListener("click", function() {
-        Wishlist_product(this);
+    cards[i].querySelector(".item_2 .wish").addEventListener("click", function() {
+        Wishlist_product(cards[i]);
     });
 
-    cards[i].querySelector(".part-1").querySelector('.item').querySelector(".btnn").addEventListener("click", function() {
-        Add_To_Cart(this);
+    cards[i].querySelector(".item .btnn").addEventListener("click", function() {
+        Add_To_Cart(cards[i]);
     });
 }
 
-function Get_Product(card) {
-    Current_Product = Set_Product(card.querySelector(".part-2").innerHTML,
-        card.querySelector(".part-2 #product_descrption").innerHTML,
-        card.querySelector(".part-2 .product_price").innerHTML, getRandomInt(1000));
-
-    document.cookie = 'myCookie=' + JSON.stringify(Current_Product);
-    console.log("Done");
+function Get_Product(card) {    
+    Current_Product = {
+        Name: card.querySelector("#product_name").innerHTML,
+        description: card.querySelector("#product_descrption").innerHTML,
+        price: card.querySelector("#product_price").innerHTML,
+        ID: getRandomInt(1000)
+    };
+    document.cookie = 'myCookie=' + JSON.stringify(Current_Product);    
     return Current_Product;
 }
 
@@ -37,6 +39,7 @@ function Wishlist_product(arg) {
         Wishlist_products = value;
     Wishlist_products.push(Get_Product(arg.parentNode));
     document.cookie = 'MyWishlist=' + JSON.stringify(Wishlist_products);
+    
 }
 
 function Add_To_Cart(arg) {
@@ -44,9 +47,7 @@ function Add_To_Cart(arg) {
     if (value)
         Cart_Products = value;
     Cart_Products.push(Get_Product(arg.parentNode));
-    document.cookie = 'MyCart=' + JSON.stringify(Cart_Products);
-    console.log(Cart_Products);
-    console.log("Done");
+    document.cookie = 'MyCart=' + JSON.stringify(Cart_Products);    
 }
 
 

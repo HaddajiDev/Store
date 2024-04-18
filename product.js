@@ -13,16 +13,15 @@ var cookieValue = document.cookie.split('; ').find(row => row.startsWith('myCook
 
 if (cookieValue) {
     cookieValue = cookieValue.split('=')[1];
-    var Current_Product = JSON.parse(cookieValue);
-
+    var Current_Product = JSON.parse(cookieValue);    
     window.onload = function() {
         set_Values();
 
         function set_Values() {
             if (Current_Product != null) {
-                // document.getElementById("product_name_pr").innerHTML = Current_Product.Name;
-                // document.getElementById("product_descrption_pr").innerHTML = Current_Product.description;
-                // document.getElementById("product_price_pr").innerHTML = Current_Product.price;
+                document.getElementById("product_name_pr").innerHTML = Current_Product.Name;
+                document.getElementById("product_descrption_pr").innerHTML = Current_Product.description;
+                document.getElementById("product_price_pr").innerHTML = Current_Product.price;
             }
 
         }

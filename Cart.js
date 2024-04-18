@@ -77,8 +77,9 @@ function Spawn_Parent(index, value) {
     Descrption_product.innerHTML = Current_Product[index].description;
     Price_product.innerHTML = Current_Product[index].price;
 
-    let Current_price = Current_Product[index].price.replace(/$/g, '');
-    price += parseInt(Current_price, 10) * value;
+    let Current_price = Current_Product[index].price.replace("$", '');
+    console.log(Current_price);
+    price += Math.round(parseFloat(Current_price) * value);
 
     totale_Price.innerHTML = "Totale Price = " + price;
 
