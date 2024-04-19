@@ -7,7 +7,7 @@ var Wishlist_products = [];
 var Cart_Products = [];
 
 var cards = document.getElementsByClassName("product");
-console.log(cards.length);
+
 
 for (let i = 0; i < cards.length; i++) {    
     cards[i].querySelector(".item_3 .cart").addEventListener("click", function() {
@@ -35,21 +35,31 @@ function Get_Product(card) {
     return Current_Product;
 }
 
+var cart_count = document.getElementById("cart-count");
+var value_2 = Load_Coockies('MyCart=')
+cart_count.innerHTML = value_2.length;
+
+var wish_count = document.getElementById("wish-count");
+var value_3 = Load_Coockies("MyWishlist=")
+wish_count.innerHTML = value_3.length;
+
 function Wishlist_product(arg) {
-    var value = Load_Coockies('MyWishlist=');
+    let value = Load_Coockies('MyWishlist=');
     if (value)
-        Wishlist_products = value;
+        Wishlist_products = value;    
     Wishlist_products.push(Get_Product(arg.parentNode));
-    document.cookie = 'MyWishlist=' + JSON.stringify(Wishlist_products);
-    
+    document.cookie = 'MyWishlist=' + JSON.stringify(Wishlist_products);    
+    wish_count.innerHTML = value.length;
 }
 
 function Add_To_Cart(arg) {
-    var value = Load_Coockies('MyCart=');
+    let value = Load_Coockies('MyCart=');
     if (value)
-        Cart_Products = value;
-    Cart_Products.push(Get_Product(arg.parentNode));
+        Cart_Products = value;    
+    Cart_Products.push(Get_Product(arg.parentNode));    
     document.cookie = 'MyCart=' + JSON.stringify(Cart_Products);    
+    let value_2 = Load_Coockies('MyCart=');
+    cart_count.innerHTML = value_2.length;
 }
 
 
