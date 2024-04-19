@@ -96,10 +96,10 @@ for(let i = 0; i < objects.length; i++){
 
 objects[0].style.display = "flex";
 
+
 function Swap_objects(index){
     for(let i = 0; i < objects.length; i++){
         objects[i].style.display = "none";
     }
-    objects[index].style.display = "flex";
-    console.log("1");
+    objects[index].style.display = "flex";    
 }
