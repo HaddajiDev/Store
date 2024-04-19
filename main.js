@@ -7,6 +7,7 @@ var Wishlist_products = [];
 var Cart_Products = [];
 
 var cards = document.getElementsByClassName("product");
+console.log(cards.length);
 
 for (let i = 0; i < cards.length; i++) {    
     cards[i].querySelector(".item_3 .cart").addEventListener("click", function() {
@@ -27,7 +28,8 @@ function Get_Product(card) {
         Name: card.querySelector("#product_name").innerHTML,
         description: card.querySelector("#product_descrption").innerHTML,
         price: card.querySelector("#product_price").innerHTML,
-        ID: getRandomInt(1000)
+        ID: getRandomInt(1000),
+        url : card.querySelector(".part-1 img").src
     };
     document.cookie = 'myCookie=' + JSON.stringify(Current_Product);    
     return Current_Product;
@@ -62,9 +64,9 @@ function Load_Coockies(index) {
 }
 
 
-document.getElementById("Delete_Coockies").addEventListener("click", function() {
-    deleteAllCookies();
-});
+// document.getElementById("Delete_Coockies").addEventListener("click", function() {
+//     deleteAllCookies();
+// });
 
 function deleteAllCookies() {
     const cookies = document.cookie.split(";");
@@ -79,4 +81,25 @@ function deleteAllCookies() {
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
+}
+
+var objects = document.getElementsByClassName("obj");
+
+var My_buttons = document.getElementsByClassName("cata");
+
+for(let i = 0; i < objects.length; i++){
+    objects[i].style.display = "none";
+    My_buttons[i].querySelector("a").addEventListener("click", function(){
+        Swap_objects(i);
+    });
+}
+
+objects[0].style.display = "flex";
+
+function Swap_objects(index){
+    for(let i = 0; i < objects.length; i++){
+        objects[i].style.display = "none";
+    }
+    objects[index].style.display = "flex";
+    console.log("1");
 }
