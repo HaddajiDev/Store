@@ -5,19 +5,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./productPage.css">
+    
 </head>
 
 <body>
 
-
-    <div id="product_pr">
-        <h1 id="product_name_pr"></h1>
-        <p id="product_descrption_pr"></p>
-        <p id="product_price_pr"></p>
-        <img src="" alt="" id="product_img">
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="js-menu-toggle"><img src="./icons/close_icon.png"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+      
+      
+    <div class="site-navbar-wrap">
+        <div class="site-navbar-top">
+          <div class="container py-3">
+            <div class="row align-items-center">
+              <div class="col-6">
+                <div class="d-flex mr-auto">
+                  <a href="#" class="d-flex align-items-center mr-4">
+                    <span class="mr-2"><img src="./icons/envelope.png" alt=""></span>
+                    <span class="d-none d-md-inline-block">info@domain.com</span>
+                  </a>
+                  <a href="#" class="d-flex align-items-center mr-auto">
+                    <span class="mr-2"><img src="./icons/phone.png" alt=""></span>
+                    <span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 text-right">
+                <div class="mr-auto">
+                  <a href="#" class="p-2 pl-0"><span><img src="./icons/twitter.png" alt=""></span></a>
+                  <a href="#" class="p-2 pl-0"><span><img src="./icons/facebook.png" alt=""></span></a>
+                  <a href="#" class="p-2 pl-0"><span><img src="./icons/linkin.png" alt=""></span></a>
+                  <a href="#" class="p-2 pl-0"><span><img src="./icons/instgram.png" alt=""></span></a>
+                </div>
+                
+              </div>
+            </div>            
+          </div>
+          
     </div>
 
+    <div class="site-navbar site-navbar-target js-sticky-header">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <h1 class="my-0 site-logo"><a href="home.html">My Store</a></h1>
+              </div>
+              <div class="col-10">
+                <nav class="site-navigation text-right" role="navigation">
+                  <div class="container">
+                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="h3"><img src="./icons/Menu.png"></span></a></div>
+  
+                    <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+                      <li class="active"><a href="#home-section" class="nav-link">Home</a></li>
+                      <li><a href="#classes-section" class="nav-link">Classes</a></li>
+                      <li class="has-children">
+                        <a href="#" class="nav-link">Pages</a>
+                        <ul class="dropdown">
+                          <li><a href="#" class="nav-link">Team</a></li>
+                          <li><a href="#" class="nav-link">Pricing</a></li>
+                          <li><a href="#" class="nav-link">FAQ</a></li>
+                          <li class="has-children">
+                            <a href="#">More Links</a>
+                            <ul class="dropdown">
+                              <li><a href="#">Menu One</a></li>
+                              <li><a href="#">Menu Two</a></li>
+                              <li><a href="#">Menu Three</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#about-section" class="nav-link">About</a></li>
+                      <li><a href="#events-section" class="nav-link">Events</a></li>
+                      <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                      <li><a href="#contact-section" class="nav-link">Contact</a></li>                      
+                      <li><a href="Wishlist.html" class="nav-link icon"><img src="./icons/Heart.png"><p class="Count" id="wish-count">0</p></a></li>
+                      <li><a href="Cart.html" class="nav-link icon"><img src="./icons/cart.png"><p class="Count" id="cart-count">0</p></a></li>
+                      <li><a href="" class="nav-link icon"><img src="./icons/account.png"></a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="space"></div>
+      <section>
+        <div class="container">
+            <div class="row">
+                <div id="product_pr">
+                    <div class="imgs">
+                        <img src="" alt="" id="product_img">
+                        <div class="extra-imgs">
+                            <button class="C_btn"><img src="https://media.ldlc.com/r1600/ld/products/00/06/09/33/LD0006093342.jpg" alt="" id="product-extra-img-1"></button>
+                            <button class="C_btn"><img src="https://media.ldlc.com/r1600/ld/products/00/06/09/33/LD0006093342.jpg" alt="" id="product-extra-img-2"></button>
+                            <button class="C_btn"><img src="https://media.ldlc.com/r1600/ld/products/00/06/09/33/LD0006093342.jpg" alt="" id="product-extra-img-3"></button>
+                        </div>                        
+                    </div>
+                    
+                    <div class="Second_Part">
+                        <h1 id="product_name_pr">product Name</h1>
+                        <div class="brand">
+                            <h6>Brand : °<h6 id="brand"></h6></h6>
+                        </div>                        
+                        <h5 id="product_descrption_pr">Descrption</h5>
+                        <b><h2 id="product_price_pr">13$</h2></b>
+                        <hr>
+                        <div class="buttonss">
+                            <button id="cart-btn"><img src="./icons/cart.png">Add To Cart</button>
+                            <button id="wish-btn"><img src="./icons/Heart.png" alt="">Add To Wishlist</button>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+      </section>
+      <div class="space"></div>
+      <div class="space"></div>
+      <div class="space"></div>
+      <footer class="footer">
+        <div class="container bottom_border">
+        <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+        <!--headin5_amrc-->
+        <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <p><i class="fa fa-location-arrow"></i> Gabes_Tunisie </p>
+        <p><img src="./icons/phone.png" alt="">  +91-9999878398  </p>
+        <p><img src="./icons/envelope.png" alt=""> info@example.com  </p>
+        
+        
+        </div>
+        
+        
+        <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+        <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+        <li><a href="">Catagorie_1</a></li>
+        <li><a href="">Catagorie_2</a></li>
+        <li><a href="">Catagorie_3</a></li>
+        <li><a href="">Catagorie_4</a></li>
+        <li><a href="">Catagorie_5</a></li>
+        <li><a href="">Catagorie_6</a></li>
+        </ul>
+        <!--footer_ul_amrc ends here-->
+        </div>
+        
+        
+        <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+        <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+        <li><a href="">Link_1</a></li>
+        <li><a href="">Link_2</a></li>
+        <li><a href="">Link_3</a></li>        
+        </ul>
+        <!--footer_ul_amrc ends here-->
+        </div>
+        
+        
+        <div class=" col-sm-4 col-md  col-12 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+        <!--headin5_amrc ends here-->
+        
+        <ul class="footer_ul2_amrc">
+        <li><a href="#"><i class="fleft padding-right"><img src="./icons/twitter.png"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+        <li><a href="#"><i class="fleft padding-right"><img src="./icons/twitter.png"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+        <li><a href="#"><i class="fleft padding-right"><img src="./icons/twitter.png"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+        </ul>
+        <!--footer_ul2_amrc ends here-->
+        </div>
+        </div>
+        </div>
+        
+        
+        <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Contact</a></li>
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+        <p class="text-center">Copyright @2024 | Designed With by <a href="#">Ahmed Haddaji</a></p>
+        
+        <ul class="social_footer_ul">
+        <li><a href=""><img src="./icons/facebook.png" alt=""></a></li>
+        <li><a href=""><img src="./icons/twitter.png" alt=""></a></li>
+        <li><a href=""><img src="./icons/linkin.png" alt=""></a></li>
+        <li><a href=""><img src="./icons/instgram.png" alt=""></a></li>
+        </ul>
+        <!--social_footer_ul ends here-->
+        </div>
+        
+    </footer>
+
     <script src="./product.js" type="module"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

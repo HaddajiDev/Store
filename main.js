@@ -29,19 +29,23 @@ function Get_Product(card) {
         description: card.querySelector("#product_descrption").innerHTML,
         price: card.querySelector("#product_price").innerHTML,
         ID: getRandomInt(1000),
-        url : card.querySelector(".part-1 img").src
+        url : card.querySelector(".part-1 > img").src,
+        url_2 : card.querySelector(".part-1 .img-extra-1").src,
+        url_3 : card.querySelector(".part-1 .img-extra-2").src
     };
     document.cookie = 'myCookie=' + JSON.stringify(Current_Product);    
     return Current_Product;
 }
 
 var cart_count = document.getElementById("cart-count");
-var value_2 = Load_Coockies('MyCart=')
-cart_count.innerHTML = value_2.length;
+var value_2 = Load_Coockies('MyCart=');
+if(value_2)
+    cart_count.innerHTML = value_2.length;
 
 var wish_count = document.getElementById("wish-count");
-var value_3 = Load_Coockies("MyWishlist=")
-wish_count.innerHTML = value_3.length;
+var value_3 = Load_Coockies("MyWishlist=");
+if(value_3)
+    wish_count.innerHTML = value_3.length;
 
 function Wishlist_product(arg) {
     let value = Load_Coockies('MyWishlist=');
@@ -60,6 +64,7 @@ function Add_To_Cart(arg) {
     document.cookie = 'MyCart=' + JSON.stringify(Cart_Products);    
     let value_2 = Load_Coockies('MyCart=');
     cart_count.innerHTML = value_2.length;
+    console.log("Done");
 }
 
 

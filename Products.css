@@ -281,7 +281,7 @@ opacity: 0;
     border: none;
     background-color:white;
     border-radius: 5%;
-    width: 20%;
+    width: 30%;
     padding: 1%;
     font-size: 12px;
     display: flex;
@@ -300,6 +300,7 @@ opacity: 0;
     border-radius: 50%;
     background-color: #fe302f;    
   }
+  
 .sec-cont{
     display: flex;
     flex-direction: row;
@@ -330,7 +331,11 @@ opacity: 0;
   }
 
   .cata h3{
-    font-size: 20px;    
+    font-size: 20px;
+    
+    &:hover{
+      color: #fe302f;
+    }
   }
   
   .f-sec-2 h2{
@@ -366,5 +371,179 @@ opacity: 0;
   .product ul a{
     cursor: pointer;
   }
+
+
+  .card_ {
+    border-radius: 16px;
+    width: 100%;
+    height: 360px;
+    background: url(https://www.digitaltrends.com/wp-content/uploads/2023/05/rtx-4060-ti-review-1.jpg?resize=442%2C360&p=1);/*442*360*/
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(0,0,0,.85);
+  }
+  
+  .card_:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,.92);
+  }
+  
+  .card_ .img_ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .card_ .img_ span {
+    width: 25%;
+    height: 100%;
+    background: url(https://www.digitaltrends.com/wp-content/uploads/2023/05/rtx-4060-ti-review-1.jpg?resize=442%2C360&p=1);
+    background-size: cover;
+    transition: .5s;
+  }
+  
+  .card_ .img_ span:nth-child(1) {
+    background-position: 0;
+    transition-delay: 0;
+  }
+  
+  .card_ .img_ span:nth-child(2) {
+    background-position: 33.33333%;
+    transition-delay: .1s;
+  }
+  
+  .card_ .img_ span:nth-child(3) {
+    background-position: 66.66666%;
+    transition-delay: .2s;
+  }
+  
+  .card_ .img_ span:nth-child(4) {
+    background-position: 100%;
+    transition-delay: .3s;
+  }
+  
+  .card_:hover .img_>span {
+    transform: translateY(-100%);
+  }
+  
+  .card_:hover .content_ {
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: .1s;
+  }
+  
+  .content_ {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }
+
+
+
+  .card_2 {
+    border-radius: 16px;
+    width: 100%;
+    height: 360px;
+    background: url(https://www.digitaltrends.com/wp-content/uploads/2023/04/nvidia-rtx-4070-review-10.jpg?resize=442%2C360&p=1);/*442*360*/
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(0,0,0,.85);
+  }
+  
+  .card_2:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,.92);
+  }
+  
+  .card_2 .img_2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .card_2 .img_2 span {
+    width: 25%;
+    height: 100%;
+    background: url(https://www.digitaltrends.com/wp-content/uploads/2023/04/nvidia-rtx-4070-review-10.jpg?resize=442%2C360&p=1);
+    background-size: cover;
+    transition: .5s;
+  }
+  
+  .card_2 .img_2 span:nth-child(1) {
+    background-position: 0;
+    transition-delay: 0;
+  }
+  
+  .card_2 .img_2 span:nth-child(2) {
+    background-position: 33.33333%;
+    transition-delay: .1s;
+  }
+  
+  .card_2 .img_2 span:nth-child(3) {
+    background-position: 66.66666%;
+    transition-delay: .2s;
+  }
+  
+  .card_2 .img_2 span:nth-child(4) {
+    background-position: 100%;
+    transition-delay: .3s;
+  }
+  
+  .card_2:hover .img_2>span {
+    transform: translateY(-100%);
+  }
+  
+  .card_2:hover .content_ {
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: .1s;
+  }
+
+
+  .op-Container{
+    background-color: #fff;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .op-Container p{
+    text-align: center;
+  }
+  .op-Container button{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border: none;
+    border-radius: 2%;
+  }
+  
   
   
