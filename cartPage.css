@@ -13,8 +13,15 @@
 #My_table{
     width: 100%;
     text-align: center;
-    border: 1px solid black;
-    border-radius: 5%;
+    border: 1px solid black !important;
+    border-radius: 5% !important;    
+}
+
+.Totale-cont h1{
+    
+    font-size: 30px;
+    font-weight: 600;
+    
 }
 
 

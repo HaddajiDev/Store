@@ -13,14 +13,14 @@ const Set_Product = (Name, description, price, ID, url, url_2, url_3) => {
 }
 
 var cookieValue = document.cookie.split('; ').find(row => row.startsWith('myCookie='));
-console.log(cookieValue);
+
 
 if (cookieValue) {    
-    cookieValue = cookieValue.split('=')[1];
+    cookieValue = cookieValue.split('=')[1];    
     var Current_Product = JSON.parse(cookieValue);
+    
     window.onload = function() {
-        set_Values();
-        
+        set_Values();        
         function set_Values() {
             if (Current_Product != null) {
                 document.getElementById("product_name_pr").innerHTML = Current_Product.Name;

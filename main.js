@@ -33,7 +33,7 @@ function Get_Product(card) {
         url_2 : card.querySelector(".part-1 .img-extra-1").src,
         url_3 : card.querySelector(".part-1 .img-extra-2").src
     };
-    document.cookie = 'myCookie=' + JSON.stringify(Current_Product);    
+    document.cookie = 'myCookie=' + JSON.stringify(Current_Product);       
     return Current_Product;
 }
 
@@ -64,7 +64,7 @@ function Add_To_Cart(arg) {
     document.cookie = 'MyCart=' + JSON.stringify(Cart_Products);    
     let value_2 = Load_Coockies('MyCart=');
     cart_count.innerHTML = value_2.length;
-    console.log("Done");
+    console.log(Load_Coockies('MyCart='));
 }
 
 

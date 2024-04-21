@@ -207,14 +207,16 @@ opacity: 0;
 }
 .sec-1{
     display: flex;
-    align-items: center;    
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
 }
 .sec-2{
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-    align-items: flex-end;    
+    align-items: center;    
 }
 .sec-2 h1{
     font-size: 30px;
@@ -227,6 +229,19 @@ opacity: 0;
     width: 180px;    
 }
 
+.Deal_Con{
+  display: flex;
+  
+  align-items: center;
+}
+
+.Deal_Con ul{
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-around;
+}
+
 .BG{
     background-color: #f6f6f6;
     padding: 1%;
@@ -234,13 +249,14 @@ opacity: 0;
 
 .cont{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
 }
 
   /* Hide the images by default */
-  .mySlides {
-    display: none;
+  .mySlides {    
+    display: none;    
   }
+
   .dot {
     cursor: pointer;
     height: 15px;
@@ -310,7 +326,8 @@ opacity: 0;
 }
   .f-sec-1{
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;  
+    justify-content: center;   
     gap: 10px;
   }
   .cata{
@@ -345,7 +362,7 @@ opacity: 0;
   .pro-cont{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid rgba(165, 165, 165, 0.644);
     border-radius: 5%;
@@ -354,10 +371,16 @@ opacity: 0;
   .pro-cont img{
     width: 180px;
   }
+  .pro-cont #product_name{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
  
   .pro-cont ul{
-    gap: 12px;
+    width: 100%;
     
+    align-self: center;
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -365,7 +388,7 @@ opacity: 0;
   }
 
   .Small-Space{
-    height: 35px;
+    height: 15px;
   }
 
   .product ul a{
